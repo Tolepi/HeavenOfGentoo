@@ -40,14 +40,13 @@ exec --no-startup-id dunstify "Holy shit, wake up and use your DAMN computer!"
 # Flameshot
 bindsym $mod+Print exec flameshot gui
 
-# --- Configuración de Bordes Estéticos ---
+# border thing and thing
 new_window pixel 2
 new_float pixel 2
 gaps inner 4
 gaps outer 2
 
-# --- Paleta de Colores (Tokyo Night / Gentoo-Dark) ---
-# Clase                 Borde    Fondo    Texto    Indicador Ajuste
+# da colors!!!
 client.focused          #9d7cd8  #9d7cd8  #c0caf5  #9d7cd8   #9d7cd8
 client.focused_inactive #1f2335  #101216  #565f89  #1f2335   #1f2335
 client.unfocused        #1f2335  #101216  #565f89  #1f2335   #1f2335
