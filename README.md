@@ -14,6 +14,7 @@ Stuff includes:
 - Cava (which are from Rashidov29s dotfiles, go check them out! making my own config soon tho :3)
 - A GTK Theme (which i use for nemo file manager and stuff)
 - Neovim (my text editor :3)
+
 And more! (i think? i hope so..)
 
 # But how do i even install it?
@@ -22,6 +23,8 @@ Clone the repository, get into it and move all the configurations you want to ~/
 git clone https://github.com/Tolepi/HeavenOfGentoo
 cd HeavenOfGentoo
 ```
+The configs, gtk theme and fonts are on separate folders, each one.
+
 For the firefox theme, you can get it on the Firefox theme store!
 https://addons.mozilla.org/en-US/firefox/addon/heaven-of-gentoo/
 
