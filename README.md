@@ -18,7 +18,7 @@ Stuff includes:
 And more! (i think? i hope so..)
 
 # But how do i even install it?
-Clone the repository, get into it and move all the configurations you want to ~/.config, the theme goes to ~/.themes
+Clone the repository, get into it and move all the configurations you want to ~/.config, the theme goes to ~/.themes (to apply completely the theme, copy the gtk-3.0 config file to ~/.config)
 ```
 git clone https://github.com/Tolepi/HeavenOfGentoo
 cd HeavenOfGentoo
