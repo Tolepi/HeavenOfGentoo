@@ -1,0 +1,206 @@
+/* =============================================================
+   HEAVEN OF GENTOO - GTK3 / GTK4 FULL THEME
+   Paleta: #101216 (Fondo), #161920 (Superficies), #1f2335 (Bordes),
+           #565f89 (Muted), #c0caf5 (Texto), #9d7cd8 (Morado Gentoo)
+   ============================================================= */
+
+/* --- DEFINICIÓN DE VARIABLES BASE --- */
+@define-color theme_bg_color #101216;
+@define-color theme_fg_color #c0caf5;
+@define-color theme_base_color #101216;
+@define-color theme_text_color #c0caf5;
+@define-color theme_selected_bg_color #9d7cd8;
+@define-color theme_selected_fg_color #101216;
+@define-color insensitive_bg_color #161920;
+@define-color insensitive_fg_color #565f89;
+@define-color border_color #1f2335;
+
+/* --- RESET GENERAL --- */
+* {
+    background-clip: padding-box;
+    -GtkToolItem-shadow-type: none;
+    -GtkTextView-error-underline-color: #565f89;
+    outline-color: #9d7cd8;
+    outline-style: solid;
+    outline-offset: -1px;
+    font-family: "Iosevka Term", "Iosevka", monospace;
+}
+
+window, .background {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+/* --- BORDES Y SEPARADORES --- */
+separator, divider {
+    background-color: #1f2335;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/* --- BOTONES --- */
+button {
+    background-color: #161920;
+    color: #c0caf5;
+    border: 1px solid #1f2335;
+    border-radius: 0px;
+    padding: 6px 12px;
+}
+
+button:hover {
+    background-color: #1f2335;
+    color: #9d7cd8;
+    border-color: #9d7cd8;
+}
+
+button:checked, button:active {
+    background-color: #9d7cd8;
+    color: #101216;
+    border-color: #9d7cd8;
+}
+
+button:disabled {
+    background-color: #101216;
+    color: #565f89;
+    border-color: #161920;
+}
+
+/* --- ENTRADAS DE TEXTO / BÚSQUEDA --- */
+entry {
+    background-color: #161920;
+    color: #c0caf5;
+    border: 1px solid #1f2335;
+    border-radius: 0px;
+    padding: 6px;
+}
+
+entry:focus {
+    border-color: #9d7cd8;
+}
+
+entry selection {
+    background-color: #9d7cd8;
+    color: #101216;
+}
+
+/* --- PESTAÑAS (NOTEBOOK) --- */
+notebook header {
+    background-color: #101216;
+    border-bottom: 1px solid #1f2335;
+}
+
+notebook tab {
+    background-color: #161920;
+    color: #565f89;
+    border: 1px solid #1f2335;
+    padding: 6px 12px;
+    border-radius: 0px;
+}
+
+notebook tab:checked {
+    background-color: #101216;
+    color: #9d7cd8;
+    border-bottom: 2px solid #9d7cd8;
+}
+
+/* --- BARRAS DE DESPLAZAMIENTO (SCROLLBARS) --- */
+scrollbar {
+    background-color: #101216;
+}
+
+scrollbar slider {
+    background-color: #1f2335;
+    min-width: 6px;
+    min-height: 6px;
+    border-radius: 0px;
+}
+
+scrollbar slider:hover {
+    background-color: #9d7cd8;
+}
+
+/* --- MENÚS Y POPUPS --- */
+menu, .menu, popover {
+    background-color: #161920;
+    color: #c0caf5;
+    border: 1px solid #1f2335;
+    padding: 4px;
+}
+
+menuitem, .menuitem {
+    padding: 5px 10px;
+}
+
+menuitem:hover, .menuitem:hover {
+    background-color: #9d7cd8;
+    color: #101216;
+}
+
+/* =============================================================
+   ESPECÍFICO PARA NEMO Y NAVEGADORES DE ARCHIVOS
+   ============================================================= */
+
+/* Panel Lateral (Sidebar de Ubicaciones/Marcadores) */
+NemoWindow .sidebar,
+NemoWindow .sidebar .view,
+NemoPlacesSidebar,
+.nemo-window .sidebar {
+    background-color: #161920;
+    color: #c0caf5;
+    border-right: 1px solid #1f2335;
+}
+
+/* Elementos seleccionados en el panel lateral */
+NemoPlacesSidebar treeview:selected,
+.nemo-window .sidebar row:selected {
+    background-color: #1f2335;
+    color: #9d7cd8;
+    font-weight: bold;
+}
+
+/* Área de Rejilla / Lista de Archivos Principales */
+NemoWindow .view,
+NemoWindow .view:not(:selected),
+.nemo-window .nemo-window-pane {
+    background-color: #101216;
+    color: #c0caf5;
+}
+
+/* Archivo o Carpeta Seleccionada en Nemo */
+NemoWindow .view:selected,
+NemoWindow .view iconview:selected,
+.nemo-window .view:selected {
+    background-color: #9d7cd8;
+    color: #101216;
+}
+
+/* Barra de Ruta (Breadcrumbs / Pathbar) */
+NemoPathbar button {
+    background-color: #161920;
+    color: #c0caf5;
+    border: 1px solid #1f2335;
+    margin: 2px;
+}
+
+NemoPathbar button:checked {
+    background-color: #9d7cd8;
+    color: #101216;
+    border-color: #9d7cd8;
+}
+
+/* Barra de Estado Inferior */
+NemoWindow .statusbar,
+.nemo-window .statusbar {
+    background-color: #161920;
+    color: #565f89;
+    border-top: 1px solid #1f2335;
+}
+
+/* Toolbars y Barra de Menú Superior */
+NemoWindow .toolbar,
+.nemo-window headerbar {
+    background-color: #101216;
+    color: #c0caf5;
+    border-bottom: 1px solid #1f2335;
+    box-shadow: none;
+}

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Heaven-Of-Gentoo
+Comment=Monochrome Gentoo Purple GTK Theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Heaven-Of-Gentoo
+MetacityTheme=Heaven-Of-Gentoo
+IconTheme=Adwaita
+CursorTheme=Adwaita
