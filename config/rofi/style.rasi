@@ -1,0 +1,97 @@
+configuration {
+    modi:                       "drun,run,window";
+    font:                       "Terminess Nerd Font 12";
+    show-icons:                 false;
+    display-drun:               "user@gentoo ── λ";
+    display-run:                "execute ── $";
+    display-window:             "window ── 🗖";
+    drun-display-format:        "{name}";
+    terminal:                   "kitty";
+}
+
+@theme "/dev/null" /* Clear hardcoded internal defaults */
+
+* {
+    /* Gentoo-Dark & Tokyo Night color matching */
+    bg-color:           #101216;
+    card-bg:            #161920;
+    fg-color:           #c0caf5;
+    muted:              #565f89;
+    gentoo-purple:      #9d7cd8;
+    cyan-accent:        #7dcfff;
+    green-accent:       #9ece6a;
+
+    background-color:   transparent;
+    text-color:         @fg-color;
+}
+
+window {
+    background-color:   @bg-color;
+    border:             1px;
+    border-color:       #9d7cd8;
+    border-radius:      6px;
+    width:              600px;
+    padding:            20px;
+}
+
+mainbox {
+    children:           [ inputbar, listview ];
+    spacing:            15px;
+}
+
+/* Search Prompt Line */
+inputbar {
+    background-color:   @card-bg;
+    border:             1px;
+    border-color:       #1f2335;
+    border-radius:      4px;
+    padding:            10px 15px;
+    children:           [ prompt, entry ];
+}
+
+prompt {
+    text-color:         @green-accent;
+    margin:             0px 10px 0px 0px;
+}
+
+entry {
+    text-color:         @fg-color;
+    placeholder:        "Type to filter...";
+    placeholder-color:  @muted;
+}
+
+/* Items List layout */
+listview {
+    fixed-height:       true;
+    lines:              8;
+    columns:            1;
+    scrollbar:          false;
+    spacing:            4px;
+}
+
+element {
+    padding:            8px 12px;
+    border-radius:      4px;
+    children:           [ element-text ];
+}
+
+/* Terminal layout styling using custom pseudo-tree characters */
+element-text {
+    text-color:         @fg-color;
+}
+
+/* Prepend pseudo-tree elements dynamically via state logic */
+element normal.normal, element alternate.normal {
+    background-color:   transparent;
+}
+
+/* Hover & Selection highlights */
+element selected.normal {
+    background-color:   @card-bg;
+    border:             0px 0px 0px 4px;
+    border-color:       @gentoo-purple;
+}
+
+element-text selected {
+    text-color:         @cyan-accent;
+}

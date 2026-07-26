@@ -1,0 +1,76 @@
+# =============================================================
+# HEAVEN OF GENTOO - BTOP COMPLETE THEME
+# =============================================================
+
+# --- 1. FONDO Y TEXTO PRINCIPAL ---
+theme[main_bg]="#101216"
+theme[main_fg]="#c0caf5"
+
+# --- 2. TEXTO INACTIVO Y SECUNDARIO ---
+theme[title]="#c0caf5"
+theme[inactive_fg]="#565f89"
+theme[proc_misc]="#565f89"
+
+# --- 3. BORDES Y CAJAS (Contornos limpios) ---
+theme[cpu_box]="#1f2335"
+theme[mem_box]="#1f2335"
+theme[net_box]="#1f2335"
+theme[proc_box]="#1f2335"
+theme[div_line]="#1f2335"
+
+# --- 4. SELECCIÓN DE MENÚS Y PROCESOS ---
+theme[selected_bg]="#161920"
+theme[selected_fg]="#7dcfff"
+
+# --- 5. INDICADORES DE ARRANQUE / CABECERAS ---
+theme[hi_start]="#9d7cd8"
+theme[hi_end]="#7dcfff"
+
+# --- 6. GRÁFICOS DE CPU ---
+theme[cpu_start]="#7dcfff"
+theme[cpu_mid]="#9d7cd8"
+theme[cpu_end]="#9ece6a"
+
+# --- 7. GRÁFICOS DE TEMPERATURA / BATERÍA ---
+theme[temp_start]="#7dcfff"
+theme[temp_mid]="#9ece6a"
+theme[temp_end]="#f7768e"
+
+theme[batt_start]="#f7768e"
+theme[batt_mid]="#e0af68"
+theme[batt_end]="#9ece6a"
+
+# --- 8. GRÁFICOS DE RED (Subida y Bajada) ---
+theme[download_start]="#7dcfff"
+theme[download_mid]="#7aa2f7"
+theme[download_end]="#9d7cd8"
+
+theme[upload_start]="#9d7cd8"
+theme[upload_mid]="#c0caf5"
+theme[upload_end]="#f7768e"
+
+# --- 9. GRÁFICOS DE MEMORIA / DISCO ---
+# Libre
+theme[free_start]="#565f89"
+theme[free_mid]="#7aa2f7"
+theme[free_end]="#c0caf5"
+
+# En caché
+theme[cached_start]="#7dcfff"
+theme[cached_mid]="#7aa2f7"
+theme[cached_end]="#9d7cd8"
+
+# Disponible
+theme[available_start]="#9ece6a"
+theme[available_mid]="#e0af68"
+theme[available_end]="#f7768e"
+
+# En uso
+theme[used_start]="#9d7cd8"
+theme[used_mid]="#7dcfff"
+theme[used_end]="#f7768e"
+
+# --- 10. GRÁFICOS DE LISTA DE PROCESOS ---
+theme[proc_start]="#7dcfff"
+theme[proc_mid]="#9d7cd8"
+theme[proc_end]="#9ece6a"

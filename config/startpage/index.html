@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~ / startpage</title>
+    <style>
+        /* Gentoo-Dark & Tokyo Night inspired color palette */
+        :root {
+            --bg-color: #101216;       /* Deep dark terminal background */
+            --card-bg: #161920;        /* Slightly lighter container color */
+            --fg-color: #c0caf5;       /* Main text color (soft white/blue) */
+            --muted: #565f89;          /* Dimmed comments/subtexts */
+            --gentoo-purple: #9d7cd8;  /* Iconic Gentoo Purple accent */
+            --cyan-accent: #7dcfff;    /* Cyan for secondary items */
+            --green-accent: #9ece6a;   /* Prompt success color */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Terminess Nerd Font;
+            background-color: var(--bg-color);
+            color: var(--fg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            width: 100%;
+        }
+
+        /* Top Bar Info Dashboard */
+        header {
+            margin-bottom: 35px;
+            border-bottom: 1px dashed var(--muted);
+            padding-bottom: 20px;
+        }
+
+        .sys-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .sys-info span strong {
+            color: var(--gentoo-purple);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--fg-color);
+            font-weight: normal;
+        }
+
+        header h1 span {
+            color: var(--gentoo-purple);
+        }
+
+        /* Terminal Search Box */
+        .search-area {
+            margin-bottom: 45px;
+        }
+
+        .prompt {
+            color: var(--green-accent);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .prompt span {
+            color: var(--cyan-accent);
+        }
+
+        .search-box form {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box form::before {
+            content: ">";
+            position: absolute;
+            left: 15px;
+            color: var(--gentoo-purple);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 14px 14px 40px;
+            background-color: var(--card-bg);
+            border: 1px solid #1f2335;
+            border-radius: 6px;
+            color: var(--fg-color);
+            font-family: inherit;
+            font-size: 1.05rem;
+            outline: none;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .search-box input:focus {
+            border-color: var(--gentoo-purple);
+            box-shadow: 0 0 10px rgba(157, 124, 216, 0.15);
+        }
+
+        /* Category Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .category-box {
+            background-color: var(--card-bg);
+            padding: 22px;
+            border-radius: 6px;
+            border: 1px solid #1f2335;
+        }
+
+        .category-box h2 {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            color: var(--gentoo-purple);
+            border-bottom: 1px solid #1f2335;
+            padding-bottom: 5px;
+        }
+
+        .category-box ul {
+            list-style: none;
+        }
+
+        .category-box ul li {
+            margin-bottom: 10px;
+        }
+
+        .category-box ul li a {
+            color: var(--fg-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-block;
+            transition: transform 0.15s ease, color 0.15s ease;
+        }
+
+        .category-box ul li a::before {
+            content: "├─ ";
+            color: var(--muted);
+        }
+
+        .category-box ul li:last-child a::before {
+            content: "└─ ";
+        }
+
+        .category-box ul li a:hover {
+            color: var(--cyan-accent);
+            transform: translateX(4px);
+        }
+
+        /* Footer Status Line */
+        footer {
+            margin-top: 50px;
+            border-top: 1px dashed var(--muted);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        footer span {
+            color: var(--gentoo-purple);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="sys-info">
+                <span>host: <strong>gentoo-box</strong></span>
+                <span id="live-date">FETCHING DATE...</span>
+            </div>
+            <h1 id="greeting">localhost:~# <span>init 0</span></h1>
+        </header>
+
+        <div class="search-area">
+            <div class="prompt">user@gentoo <span>~ $</span> query --search</div>
+            <div class="search-box">
+                <form action="https://www.google.com/search" method="get">
+                    <input type="text" name="q" placeholder="Type here to search Google..." autofocus autocomplete="off">
+                </form>
+            </div>
+        </div>
+
+        <div class="grid">
+            
+            <div class="category-box">
+                <h2>01 // Development</h2>
+                <ul>
+                    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                    <li><a href="https://gitlab.com" target="_blank">GitLab</a></li>
+                    <li><a href="https://stackoverflow.com" target="_blank">StackOverflow</a></li>
+                </ul>
+            </div>
+
+            <div class="category-box">
+                <h2>02 // Linux & Rice</h2>
+                <ul>
+                    <li><a href="https://wiki.gentoo.org" target="_blank">Gentoo Wiki</a></li>
+                    <li><a href="https://www.reddit.com/r/unixporn/" target="_blank">r/unixporn</a></li>
+                    <li><a href="https://forums.gentoo.org" target="_blank">Gentoo Forums</a></li>
+                </ul>
+            </div>
+
+            <div class="category-box">
+                <h2>03 // Media</h2>
+                <ul>
+                    <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+                    <li><a href="https://reddit.com" target="_blank">Reddit</a></li>
+                    <li><a href="https://twitch.tv" target="_blank">Twitch</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>System status: <span>ONLINE</span> | Up and running under Portage package manager</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function updateDashboard() {
+            const now = new Date();
+            
+            // Dynamic Header Terminal Clock
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            const dateStr = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: '2-digit' });
+            document.getElementById('live-date').innerText = `${dateStr.toUpperCase()} // ${timeStr}`;
+
+            // Smart Greeting based on Time of Day
+            const hours = now.getHours();
+            let textGreeting = "localhost:~# ";
+            if (hours < 12) textGreeting += "good_morning.sh";
+            else if (hours < 18) textGreeting += "good_afternoon.sh";
+            else textGreeting += "good_evening.sh";
+            
+            document.getElementById('greeting').innerHTML = `localhost:~# <span>${textGreeting.toLowerCase()}</span>`;
+        }
+        
+        setInterval(updateDashboard, 1000);
+        updateDashboard();
+    </script>
+
+</body>
+</html>

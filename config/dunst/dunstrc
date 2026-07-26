@@ -1,0 +1,62 @@
+# =============================================================
+# HEAVEN OF GENTOO - DUNST NOTIFICATION CONFIG
+# Location: ~/.config/dunst/dunstrc
+# =============================================================
+
+[global]
+    # --- TIPOGRAFÍA Y DISEÑO ---
+    font = "Iosevka Term 10"
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    show_age_threshold = 60
+    word_wrap = yes
+    ignore_newline = no
+    
+    # --- GEOMETRÍA Y POSICIÓN ---
+    # Posición en la esquina superior derecha
+    origin = top-right
+    offset = 16x45
+    width = 320
+    height = 120
+    
+    # Estilo brutalista plano (bordes rectos de 2px)
+    corner_radius = 0
+    frame_width = 2
+    gap_size = 8
+    separator_height = 2
+    
+    # --- COLORES DE BORDES Y SEPARADORES ---
+    frame_color = "#9d7cd8"
+    separator_color = "#1f2335"
+    
+    # --- ICONOS ---
+    # Usa los mismos iconos planos que Nemo
+    icon_theme = "Papirus-Dark"
+    enable_recursive_icon_lookup = true
+    icon_position = left
+    max_icon_size = 32
+    min_icon_size = 16
+
+# --- NIVELES DE URGENCIA ---
+
+# Urgencia Baja (Ej. música, avisos secundarios)
+[urgency_low]
+    background = "#101216"
+    foreground = "#565f89"
+    frame_color = "#1f2335"
+    timeout = 3
+
+# Urgencia Normal (Notificaciones estándar)
+[urgency_normal]
+    background = "#101216"
+    foreground = "#c0caf5"
+    frame_color = "#9d7cd8"
+    timeout = 5
+
+# Urgencia Crítica (Errores de sistema, batería baja)
+[urgency_critical]
+    background = "#161920"
+    foreground = "#9d7cd8"
+    frame_color = "#9d7cd8"
+    timeout = 0
