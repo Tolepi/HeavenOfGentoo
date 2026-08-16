@@ -1,0 +1,23 @@
+title_font=Terminess Nerd Font 10
+title_alignment=center
+title_shadow_active=false
+title_shadow_inactive=false
+
+border_size=2
+frame_border_top=2
+box_resize=false
+
+active_text_color=#c0caf5
+active_bg=#101216
+active_border_color=#9d7cd8
+active_text_shadow=#101216
+
+inactive_text_color=#565f89
+inactive_bg=#101216
+inactive_border_color=#1f2335
+inactive_text_shadow=#101216
+
+# Configura el estilo plano de los botones (C: cerrar, M: maximizar, H: minimizar)
+button_layout=CHM|
+button_offset=8
+button_spacing=6
