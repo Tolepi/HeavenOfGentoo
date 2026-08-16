@@ -1,0 +1,349 @@
+/* =============================================================
+   HEAVEN OF GENTOO - GTK3 / GTK4 FULL THEME
+   Paleta: #101216 (Fondo), #161920 (Superficies), #1f2335 (Bordes),
+           #565f89 (Muted), #c0caf5 (Texto), #9d7cd8 (Morado Gentoo)
+   ============================================================= */
+
+/* --- DEFINICIÓN DE VARIABLES BASE --- */
+@define-color theme_bg_color #101216;
+@define-color theme_fg_color #c0caf5;
+@define-color theme_base_color #101216;
+@define-color theme_text_color #c0caf5;
+@define-color theme_selected_bg_color #9d7cd8;
+@define-color theme_selected_fg_color #101216;
+@define-color insensitive_bg_color #161920;
+@define-color insensitive_fg_color #565f89;
+@define-color border_color #1f2335;
+
+/* --- RESET GENERAL --- */
+* {
+    background-clip: padding-box;
+    -GtkToolItem-shadow-type: none;
+    -GtkTextView-error-underline-color: #565f89;
+    outline-color: #9d7cd8;
+    outline-style: solid;
+    outline-offset: -1px;
+    font-family: "Terminess Nerd Font";
+}
+
+window, .background {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+/* --- BORDES Y SEPARADORES --- */
+separator, divider {
+    background-color: #1f2335;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/* --- BOTONES --- */
+button {
+    background-color: #161920;
+    color: #c0caf5;
+    border: 1px solid #1f2335;
+    border-radius: 0px;
+    padding: 6px 12px;
+}
+
+button:hover {
+    background-color: #1f2335;
+    color: #9d7cd8;
+    border-color: #9d7cd8;
+}
+
+button:checked, button:active {
+    background-color: #9d7cd8;
+    color: #101216;
+    border-color: #9d7cd8;
+}
+
+button:disabled {
+    background-color: #101216;
+    color: #565f89;
+    border-color: #161920;
+}
+
+/* --- ENTRADAS DE TEXTO / BÚSQUEDA --- */
+entry {
+    background-color: #161920;
+    color: #c0caf5;
+    border: 1px solid #1f2335;
+    border-radius: 0px;
+    padding: 6px;
+}
+
+entry:focus {
+    border-color: #9d7cd8;
+}
+
+entry selection {
+    background-color: #9d7cd8;
+    color: #101216;
+}
+
+/* --- PESTAÑAS (NOTEBOOK) --- */
+notebook header {
+    background-color: #101216;
+    border-bottom: 1px solid #1f2335;
+}
+
+notebook tab {
+    background-color: #161920;
+    color: #565f89;
+    border: 1px solid #1f2335;
+    padding: 6px 12px;
+    border-radius: 0px;
+}
+
+notebook tab:checked {
+    background-color: #101216;
+    color: #9d7cd8;
+    border-bottom: 2px solid #9d7cd8;
+}
+
+/* --- BARRAS DE DESPLAZAMIENTO (SCROLLBARS) --- */
+scrollbar {
+    background-color: #101216;
+}
+
+scrollbar slider {
+    background-color: #1f2335;
+    min-width: 6px;
+    min-height: 6px;
+    border-radius: 0px;
+}
+
+scrollbar slider:hover {
+    background-color: #9d7cd8;
+}
+
+/* --- MENÚS Y POPUPS --- */
+menu, .menu, popover {
+    background-color: #161920;
+    color: #c0caf5;
+    border: 1px solid #1f2335;
+    padding: 4px;
+}
+
+menuitem, .menuitem {
+    padding: 5px 10px;
+}
+
+menuitem:hover, .menuitem:hover {
+    background-color: #9d7cd8;
+    color: #101216;
+}
+
+/* =============================================================
+   ESPECÍFICO PARA NEMO Y NAVEGADORES DE ARCHIVOS
+   ============================================================= */
+
+/* Panel Lateral (Sidebar de Ubicaciones/Marcadores) */
+NemoWindow .sidebar,
+NemoWindow .sidebar .view,
+NemoPlacesSidebar,
+.nemo-window .sidebar {
+    background-color: #161920;
+    color: #c0caf5;
+    border-right: 1px solid #1f2335;
+}
+
+/* Elementos seleccionados en el panel lateral */
+NemoPlacesSidebar treeview:selected,
+.nemo-window .sidebar row:selected {
+    background-color: #1f2335;
+    color: #9d7cd8;
+    font-weight: bold;
+}
+
+/* Área de Rejilla / Lista de Archivos Principales */
+NemoWindow .view,
+NemoWindow .view:not(:selected),
+.nemo-window .nemo-window-pane {
+    background-color: #101216;
+    color: #c0caf5;
+}
+
+/* Archivo o Carpeta Seleccionada en Nemo */
+NemoWindow .view:selected,
+NemoWindow .view iconview:selected,
+.nemo-window .view:selected {
+    background-color: #9d7cd8;
+    color: #101216;
+}
+
+/* Barra de Ruta (Breadcrumbs / Pathbar) */
+NemoPathbar button {
+    background-color: #161920;
+    color: #c0caf5;
+    border: 1px solid #1f2335;
+    margin: 2px;
+}
+
+NemoPathbar button:checked {
+    background-color: #9d7cd8;
+    color: #101216;
+    border-color: #9d7cd8;
+}
+
+/* Barra de Estado Inferior */
+NemoWindow .statusbar,
+.nemo-window .statusbar {
+    background-color: #161920;
+    color: #565f89;
+    border-top: 1px solid #1f2335;
+}
+
+/* Toolbars y Barra de Menú Superior */
+NemoWindow .toolbar,
+.nemo-window headerbar {
+    background-color: #101216;
+    color: #c0caf5;
+    border-bottom: 1px solid #1f2335;
+    box-shadow: none;
+}
+
+/* =============================================================
+   XFCE4 PANEL & WHISKER MENU
+   ============================================================= */
+
+/* Estilo base del panel */
+.xfce4-panel {
+    background-color: #101216;
+    color: #c0caf5;
+    border-bottom: 1px solid #1f2335;
+}
+
+/* Botones del panel y cambiador de escritorios (Workspaces) */
+.xfce4-panel button,
+.xfce4-panel .tasklist button,
+#xfce4-workspace-optimizer button {
+    background-color: #101216;
+    color: #c0caf5;
+    border: none;
+    border-radius: 0px;
+    padding: 0 6px;
+}
+
+/* Aplicación o ventana seleccionada en el panel */
+.xfce4-panel .tasklist button:checked,
+.xfce4-panel button:active {
+    background-color: #161920;
+    color: #9d7cd8;
+    border-bottom: 2px solid #9d7cd8;
+}
+
+.xfce4-panel button:hover {
+    background-color: #1f2335;
+    color: #9d7cd8;
+}
+
+/* =============================================================
+   WHISKER MENU - SHADES & CLEAN LAYOUT
+   ============================================================= */
+
+/* Ventana principal: limpia sin sombras internas */
+#whiskermenu-window {
+    background-color: #101216;
+    color: #c0caf5;
+    border: 2px solid #9d7cd8;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/* Campo de búsqueda minimalista sin marco pesado */
+#whiskermenu-window entry {
+    background-color: #161920;
+    color: #c0caf5;
+    border: none;
+    border-bottom: 2px solid #1f2335;
+    border-radius: 0px;
+    padding: 8px 12px;
+    box-shadow: none;
+}
+
+#whiskermenu-window entry:focus {
+    border-bottom: 2px solid #9d7cd8;
+    background-color: #161920;
+}
+
+/* Árbol de categorías y lista de aplicaciones */
+#whiskermenu-window treeview,
+#whiskermenu-window iconview {
+    background-color: transparent;
+    color: #c0caf5;
+    border: none;
+}
+
+/* Efecto Shade en Selección: sin caja dura, solo cambio de tono sutil */
+#whiskermenu-window treeview:selected,
+#whiskermenu-window iconview:selected {
+    background-image: linear-gradient(to right, rgba(157, 124, 216, 0.25), transparent);
+    color: #c0caf5;
+    border: none;
+    border-left: 3px solid #9d7cd8;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/* Botones de sesión superiores súper limpios */
+#whiskermenu-window button {
+    background-color: transparent;
+    color: #565f89;
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+#whiskermenu-window button:hover {
+    background-color: rgba(157, 124, 216, 0.15);
+    color: #9d7cd8;
+    border: none;
+}
+
+/* =============================================================
+   XFCE4 TERMINAL - CLEAN LOOK
+   ============================================================= */
+
+/* Quitar el marco alrededor del contenedor de la terminal */
+TerminalWindow vterminal {
+    padding: 8px;
+}
+
+TerminalWindow notebook {
+    border: none !important;
+    padding: 0 !important;
+    background-color: #101216;
+}
+
+/* Pestañas planas estilo Shade sin marcos cuadrados */
+TerminalWindow notebook tab {
+    background-color: #101216;
+    color: #565f89;
+    border: none;
+    border-bottom: 2px solid #1f2335;
+    border-radius: 0px;
+    padding: 4px 12px;
+    box-shadow: none;
+}
+
+TerminalWindow notebook tab:checked {
+    background-color: rgba(157, 124, 216, 0.12);
+    color: #c0caf5;
+    border-bottom: 2px solid #9d7cd8;
+}
+
+/* Ocultar la barra de desplazamiento o volverla ultra fina */
+TerminalWindow scrollbar trough {
+    background-color: transparent;
+    border: none;
+}
+
+TerminalWindow scrollbar slider {
+    background-color: #1f2335;
+    border: none;
+    border-radius: 0px;
+    min-width: 4px;
+}
