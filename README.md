@@ -43,3 +43,10 @@ file:///home/USER/.config/startpage/index.html
 
 <img width="1366" height="768" alt="2026-07-24_21-27" src="https://github.com/user-attachments/assets/f44b0fac-1a3e-4be4-b071-d5d8a7f01133" />
 
+# Extra: XFCE!!!!
+<img width="1280" height="768" alt="Screenshot_2026-08-16_23-23-49" src="https://github.com/user-attachments/assets/1861c614-cb1b-4df8-b6eb-8135612d39f9" />
+
+To apply:
+- Clone the repository (as you may have done)
+- Move the GTK Theme to ~/.themes
+- Apply using the XFCE Settings application
